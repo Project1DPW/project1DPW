@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Image Gallery</title>
+    <style>
+      ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }            
+        li {
+            float: left;             
+          }           
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 99px;
+            text-decoration: none;
+          }           
+        li a:hover {
+            background-color: #111;
+          }
+            
+            img{
+            width: 100%;
+            } 
+        .head-gallery {
+            text-align: center;
+            padding: 20px;
+            background-color: #D3D3D3;
+            font-family: cursive;
+        }
+        p{
+            text-align: center;
+            border: 4px solid;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        p:hover{
+            border: 3px solid #006400;
+        }
+        .row-gallery {
+            display: flex;
+            padding: 10px;
+            background-color: #F0FFFF;
+        }
+        .colm-gallery {
+            flex: 20%;
+            max-width: 30%;
+            padding: 5px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .colm-gallery img {
+            margin-top: 10px;
+            vertical-align: middle;
+            width: 80%;
+            height: 150px;     
+        }
+        @media screen and (max-width:600px) {
+            .colm-gallery {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+                flex-wrap: wrap;      
+            }
+        }
+        @media screen and (max-width:800px) {
+            .row-gallery {
+                flex-wrap: wrap
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a class="active" href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#recipes">RECIPES</a></li>
+    </ul>
+
+    <div class="head-gallery">
+        <h1>&#127860; Food Image Gallery &#127860;</h1>
+
+    </div>
+    <div class="row-gallery">
+    <div class="colm-gallery">
+        <p><a href="https://asset.kompas.com/crops/hgYCTwrFpAN5wQ35-Z2STU9C0vQ=/3x0:700x465/750x500/data/photo/2020/11/08/5fa7d069849e2.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://asset.kompas.com/crops/hgYCTwrFpAN5wQ35-Z2STU9C0vQ=/3x0:700x465/750x500/data/photo/2020/11/08/5fa7d069849e2.jpg"  /></a><br><br>
+            SOTO</p>
+        <p><a href="https://www.kibrispdr.org/data/makanan-dari-bakso-38.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://www.kibrispdr.org/data/makanan-dari-bakso-38.jpg"/></a><br><br>
+            BAKSO</p>
+    </div>
+
+    <div class="colm-gallery">
+        <p><a href="https://cdn-2.tstatic.net/tribunnews/foto/bank/originals/mie-ayam-bakso.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://cdn-2.tstatic.net/tribunnews/foto/bank/originals/mie-ayam-bakso.jpg" /></a><br><br>
+            MIE AYAM</p>
+        <p><a href="https://img-global.cpcdn.com/recipes/9a4e10b998cf59f2/751x532cq70/ayam-geprek-foto-resep-utama.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://img-global.cpcdn.com/recipes/9a4e10b998cf59f2/751x532cq70/ayam-geprek-foto-resep-utama.jpg" style="width: 80%; height: 150px;" /></a><br><br>
+            AYAM GEPREK</p>     
+    </div>
+
+    <div class="colm-gallery">
+        <p><a href="https://selerasa.com/wp-content/uploads/2015/05/images_nasi_nasi_goreng_nasi-goreng-biasa-nan-pedas.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://selerasa.com/wp-content/uploads/2015/05/images_nasi_nasi_goreng_nasi-goreng-biasa-nan-pedas.jpg"/></a><br><br>
+            NASI GORENG</p>
+        <p><a href="https://1.bp.blogspot.com/-Xe0UqQWQ8Js/X6pJrfnN3DI/AAAAAAAB6D8/dTOdjfsRqQ0E603M9yOS_h6Ntsr6KAr1ACLcBGAsYHQ/s500/Rendang%2BDaging%2BSapi%2B%25281%2529.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;">
+            <img src="https://1.bp.blogspot.com/-Xe0UqQWQ8Js/X6pJrfnN3DI/AAAAAAAB6D8/dTOdjfsRqQ0E603M9yOS_h6Ntsr6KAr1ACLcBGAsYHQ/s500/Rendang%2BDaging%2BSapi%2B%25281%2529.jpg"  /></a><br><br>
+            RENDANG</p>                     
+    </div>
+    </div>
+</body>
+</html>
