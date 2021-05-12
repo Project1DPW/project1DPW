@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ProjectDPW</title>
+        <style>
+            ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: #333;
+            }            
+            li {
+              float: left;             
+            }           
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 20px 99px;
+              text-decoration: none;
+            }           
+            li a:hover {
+              background-color: #111;
+            }
+            .header-gallery {
+                text-align: left;
+                padding: 20px;
+                background-color: rgb(197, 193, 193);
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            img{
+                width: 100%;
+            }
+
+            .coment{
+                background-color: rgb(197, 193, 193);
+                padding: 20px;
+                text-align: left;
+            }
+            input{
+                width: 300px;
+                height: 30px;
+            }
+        </style>
+        <script>
+            document.getElementById("submit").
+            addEventListener("click", komentar);
+            function komentar(){
+                var nama=document.getElementById("name").value;
+                var komentar=document.getElementById("komen").value;
+                for(x=0;x<=100;x++){
+                    document.getElementById("hasil").innerHTML=nama+" : "+komentar;
+                }
+            }
+        </script>
+    </head>
+<body onLoad='alert("Selamat Datang di Web Kami &#128154, silahkan klik ok.");'>
+    <ul>
+        <li><a class="active" href="#home">HOME</a></li>
+        <li><a href="#aboutus">ABOUT US</a></li>
+        <li><a href="#gallery">GALERRY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#recipes">RECIPES</a></li>
+      </ul>
+    <div class="header-gallery">
+        <h1>Online Cooking Recipes </h1>
+    </div>
+    <img src="https://tastynesia.com/wp-content/uploads/2020/01/Resep-Ayam-Geprek-Crispy.jpg">
+    <div class="coment">
+    <form onsubmit="return false">
+        <h3><label for="coment"> NAMA :</label><br>
+        <input type="text" name="nama" id="name" placeholder="Nama Anda" /><br><br>
+        <label for="coment"> KOMENTAR :</label><br>
+        <input type="text" name="coment" id="komen" placeholder="Komentar" /></h3><br>
+        <button id="submit" type="button" onclick="komentar()">Submit</button><br><br>
+        <textarea id="hasil" cols="40px" rows="10px"></textarea>
+    </form>
+    </div>
+</body>
+</html>
