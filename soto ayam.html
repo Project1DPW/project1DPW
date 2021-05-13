@@ -39,10 +39,16 @@
 			padding: 0px;
 			background-color: gainsboro
 		}
+		button{
+			margin-left: 10px;
+			background-color: lightgrey;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
 	<h2>RESEP SOTO AYAM</h2>
+	<button onclick="goback()">Kembali</button>
 	<img src="https://www.masakapahariini.com/wp-content/uploads/2019/11/shutterstock_1469046305-780x440.jpg" class="gambar">
 	<p></p>
 	<fieldset>
@@ -100,5 +106,10 @@
 		</div>
 	</ul>
 	</fieldset>
+	<script >
+		function goback(){
+			document.location.href='recipes.html';
+		}
+	</script>
 </body>
 </html>
