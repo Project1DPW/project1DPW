@@ -39,10 +39,15 @@
 			padding: 0px;
 			background-color: gainsboro
 		}
+		button{
+			margin-left: 10px;
+			background-color: lightgrey;
+			cursor: pointer;
 	</style>
 </head>
 <body>
 	<h2>RESEP RENDANG</h2>
+	<button onclick="goback()">Kembali</button>
 	<img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1610183342/deyz2ldkbm78cpcnlr9x.jpg" class="gambar">
 	<p></p>
 	<fieldset>
@@ -81,5 +86,10 @@
 		<li>Masak terus dengan api sedang sambil aduk agar bagian bawah masakan tidak hangus.</li>
 	</ul>
 	</fieldset>
+	<script >
+		function goback(){
+			document.location.href='recipes.html';
+		}
+	</script>
 </body>
 </html>
