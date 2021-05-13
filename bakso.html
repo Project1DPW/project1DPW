@@ -39,10 +39,17 @@
 			padding: 0px;
 			background-color: gainsboro
 		}
+		button{
+			margin-left: 10px;
+			background-color: lightgrey;
+			cursor: pointer;
+
+		}
 	</style>
 </head>
 <body>
 	<h2>RESEP BAKSO</h2>
+	<button onclick="goback()">Kembali</button>
 	<img src="https://cdn-2.tstatic.net/tribunnews/foto/bank/images/bakso-sapi-kuah-1.jpg" class="gambar">
 	<p></p>
 	<fieldset>
@@ -78,5 +85,10 @@
 		<li>Angkat bakso dan sajikan bersama kuah kaldu sapi.</li>
 	</ul>
 	</fieldset>
+		<script >
+		function goback(){
+			document.location.href='recipes.html';
+		}
+	</script>
 </body>
 </html>
