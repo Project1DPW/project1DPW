@@ -62,8 +62,14 @@
 	.gambar{
 		width: 660px;
 		height: 400px;
-		margin-left: 360px;
+		margin-left: 330px;
 		margin-top: 30px;
+	}
+	button{
+		margin-left: 10px;
+		background-color: lightgrey;
+		cursor: pointer;
+		border: none;
 	}
 </style>
 </head>
@@ -85,7 +91,12 @@
     </div>
   </li>
 </ul>
+<button onclick="goback()"><img src="http://cdn.onlinewebfonts.com/svg/img_159611.png" width="50" height="50"></button>
 <img src="https://asset.kompas.com/crops/JJDDe-6k3BOA1CBhUcwz6cFUtwY=/0x17:1000x683/750x500/data/photo/2021/02/18/602e5294c5efd.jpg" class="gambar">
+<script >
+	function goback(){
+		document.location.href='index.html';
+		}
 </script>
 </body>
 </html>
