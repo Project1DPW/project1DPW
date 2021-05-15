@@ -3,6 +3,9 @@
     <head>
         <title>ProjectDPW</title>
         <style>
+            body{
+                background-color: rgb(197, 193, 193);
+            }
             ul {
               list-style-type: none;
               margin: 0;
@@ -26,38 +29,33 @@
             .header-gallery {
                 text-align: left;
                 padding: 20px;
-                background-color: rgb(197, 193, 193);
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
             img{
-                width: 100%;
+                width: 75%;
+                float: left;
             }
-
             .coment{
-                background-color: rgb(197, 193, 193);
                 padding: 20px;
                 text-align: left;
+                float: left;
+                
             }
-            input{
-                width: 300px;
-                height: 30px;
+            .formp{
+                background-color: white;
+                padding: 10px;
+                padding-bottom: 50%;
+                float: right;
             }
+
         </style>
-        <script>
-            document.getElementById("submit").
-            addEventListener("click", komentar);
-            function komentar(){
-                var nama=document.getElementById("name").value;
-                var komentar=document.getElementById("komen").value;
-                for(x=0;x<=100;x++){
-                    document.getElementById("hasil").innerHTML=nama+" : "+komentar;
-                }
-            }
-        </script>
+        <!-- <script>
+          	
+        </script> -->
     </head>
-<body onLoad='alert("Selamat Datang di Web Kami &#128154, silahkan klik ok.");'>
+<body onLoad="myFunction()">
     <ul>
-        <li><a href="index.html">HOME</a></li>
+        <li><a class="active" href="index.html">HOME</a></li>
         <li><a href="aboutus.html">ABOUT US</a></li>
         <li><a href="gallery.html">GALLERY</a></li>
         <li><a href="contact.html">CONTACT</a></li>
@@ -67,15 +65,117 @@
         <h1>Online Cooking Recipes </h1>
     </div>
     <img src="https://tastynesia.com/wp-content/uploads/2020/01/Resep-Ayam-Geprek-Crispy.jpg">
+    <div class="formp">
+    <h3>Menerima Pesanan</h3>
+    <h5>Silahkan Isi Form pemesanan berikut:</h5>
+    <form onsubmit="return false">
+        <label for="name">Nama : </label><br>
+        <input type="text" id="name" name="name" placeholder="isi nama lengkap anda"><br><br>
+        <label for="alamat">Alamat : </label><br>
+        <input type="text" id="alamat" name="alamat" placeholder="isi alamat lengkap anda"><br><br>
+        <label for="telp">No. Telp : </label><br>
+        <input type="text" id="telp" name="telp" placeholder="+62"><br><br>
+        <p>Pilih :</p>
+        <input type="checkbox" id="food1" name="food1" value="food1" onclick="pilih()">
+        <label for="food1"> Soto Ayam : Rp.20.000/porsi</label> 
+        <input type="number" id="pilih1" name="pilih1" min="1" max="500" value="0" onchange="jumlah()"><br>
+        <input type="checkbox" id="food2" name="food2" value="food2" onclick="pilih()">
+        <label for="food2"> Mie Ayam : Rp.15.000/porsi</label>
+        <input type="number" id="pilih2" name="pilih1" min="1" max="500" value="0" onchange="jumlah()"><br>
+        <input type="checkbox" id="food3" name="food3" value="food3" onclick="pilih()">
+        <label for="food3"> Nasi Goreng : Rp.20.000/porsi</label>
+        <input type="number" id="pilih3" name="pilih2" min="1" max="500" value="0" onchange="jumlah()"><br>
+        <input type="checkbox" id="food4" name="food4" value="food4" onclick="pilih()">
+        <label for="food4"> Bakso : Rp.25.000/porsi</label>
+        <input type="number" id="pilih4" name="pilih3" min="1" max="500" value="0" onchange="jumlah()"><br>
+        <input type="checkbox" id="food5" name="food5" value="food5" onclick="pilih()">
+        <label for="food5"> Ayam Geprek : Rp.20.000/porsi</label>
+        <input type="number" id="pilih5" name="pilih4" min="1" max="500" value="0" onchange="jumlah()"><br>
+        <input type="checkbox" id="food6" name="food6" value="food6" onclick="pilih()">
+        <label for="food6"> Rendang : Rp.30.000/porsi</label>
+        <input type="number" id="pilih6" name="pilih5" min="1" max="500" value="0" onchange="jumlah()"><br><br>
+        <label for="name">TOTAL : </label><br>
+        <input type="text" id="total" name="total_jumlah" size="9" value="" readonly><br><br>
+        <button id="hasil" type="button" >Kirim</button>
+    </form>
+    <p id="hasil1"></p>
+    <p id="hasil2"></p>
+    <!-- <p id="alamat"></p> -->
+    </div>
     <div class="coment">
     <form onsubmit="return false">
         <h3><label for="coment"> NAMA :</label><br>
         <input type="text" name="nama" id="name" placeholder="Nama Anda" /><br><br>
         <label for="coment"> KOMENTAR :</label><br>
         <input type="text" name="coment" id="komen" placeholder="Komentar" /></h3><br>
-        <button id="submit" type="button" onclick="komentar()">Submit</button><br><br>
-        <textarea id="hasil" cols="40px" rows="10px"></textarea>
+        <button id="submit" type="button" >Submit</button><br><br>
     </form>
+    <div id="tampilan" style="padding: 10px; background-color: white ; overflow: scroll; height: 200px; width: 500px; word-wrap: break-word;">
     </div>
+    </div>
+    <script>
+        document.getElementById("submit").
+        addEventListener("click", function (){
+            var inputnama=document.getElementById("name");
+            var nama=inputnama.value;
+            var komentar=document.getElementById("komen").value;
+            // document.getElementById("hasil").innerHTML=nama+komentar;
+            var baru = document.createElement("h3")
+            var pbaru = document.createElement("p");
+            var name = document.createTextNode(nama+":");
+            var textbaru= document.createTextNode(komentar);
+            baru.appendChild(name);
+            pbaru.appendChild(textbaru);
+            var data= document.getElementById("tampilan");
+            data.appendChild(baru);
+            data.appendChild(pbaru);
+        });
+
+        function jumlah() {
+            var soto = 20000 * parseInt(document.getElementById('pilih1').value);
+            var mie = 15000 * parseInt(document.getElementById('pilih2').value);
+            var nasgor = 20000 * parseInt(document.getElementById('pilih3').value);
+            var bakso = 25000 * parseInt(document.getElementById('pilih4').value);
+            var ayam = 20000 * parseInt(document.getElementById('pilih5').value);
+            var rendang = 30000 * parseInt(document.getElementById('pilih6').value);
+            var jumlah_harga = soto + mie + nasgor + bakso + ayam + rendang;
+            document.getElementById('total').value = jumlah_harga;
+		}
+
+        function myFunction () {
+            alert("Selamat Datang di Web Kami, silahkan klik ok.");
+            for (i=1; i<=6; i++){
+                document.getElementById("pilih"+i).disabled = true;
+            }
+        }
+
+        function pilih(){
+            for (i=1; i<=6; i++){
+                if (document.getElementById("food"+i).checked){
+                    document.getElementById("pilih"+i).disabled = false;
+                }
+                else{
+                    document.getElementById("pilih"+i).disabled = true;
+                    document.getElementById("pilih"+i).value = 0;
+                    jumlah();
+                }
+            }
+        }
+        document.getElementById("hasil").
+        addEventListener("click", function (){
+            var nama=document.getElementById("name").value;
+            var alamat=document.getElementById("alamat").value;
+            var telp=document.getElementById("telp").value;
+            text=""
+            if (nama == "" || alamat=="" || telp=="" ){
+                text="mohon di isi dengan benar !!"
+            }
+            else{
+                text="Nama : "+nama +"<br>"+"Alamat : "+alamat+"<br>"+"No.Telp : "+telp +"<br>"+"<br>"+"TERIMA KASIH TELAH MEMESAN"+"<br>"+"Ditunggu ya"
+            }
+            document.getElementById("hasil1").innerHTML=text;
+
+        });
+    </script>
 </body>
 </html>
